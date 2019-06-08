@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/fragment1">
+    <fragment
+        android:id="@+id/fragment1"
+        android:label="Fragment 1"
+        android:name="com.example.taller7_enderson_salas.fragments.BlueFragment"
+        tools:layout="@layout/fragment_blue">
+        <action android:id="@+id/fragmentto2"
+            app:destination="@id/fragment2"></action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:label="Fragment 2"
+        android:name="com.example.taller7_enderson_salas.fragments.GreenFragment"
+        tools:layout="@layout/fragment_blue">
+        <action android:id="@+id/fragmentto3"
+            app:destination="@id/fragment3"></action>
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3"
+        android:label="Fragment 3"
+        android:name="com.example.taller7_enderson_salas.fragments.OrangeFragment"
+        tools:layout="@layout/fragment_blue">
+        <argument android:name="message"
+            android:defaultValue="No Message"
+            app:argType="string"></argument>
+        <action android:id="@+id/fragmentto1"
+            app:destination="@id/fragment1"></action>
+    </fragment>
+
+
+</navigation>
